@@ -62,8 +62,6 @@ A modern web application for managing company communications and tasks with an i
 - MongoDB with Mongoose
 - JWT for authentication
 - CORS enabled
-- Cookie Parser
-- Environment variables support
 
 ## Project Structure
 
@@ -236,24 +234,4 @@ ETENT/
 4. Enable HTTPS
 5. Configure caching
 
-## Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-MIT License
-
-## Authors
-
-[Your Name]
-
-## Acknowledgments
-
-- Material-UI Team
-- FullCalendar Team
-- React Team
