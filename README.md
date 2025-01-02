@@ -1,9 +1,27 @@
 # Communication Task Calendar
 A modern web application for managing company communications and tasks with an intuitive calendar interface and notification system.
+![Screenshot (55)](https://github.com/user-attachments/assets/3ef8ef4d-04f5-49e5-b93e-bc8af1f7b5a3)
+  - Red: Overdue communications
+  - Yellow: Due today
+  - Green: Completed tasks
+  - Blue: Upcoming tasks
 
 ## Live Demo
 
 https://track-communication-task-calendar-app.vercel.app/
+
+Email:"user@user.com" Password:"user"
+![Screenshot (49)](https://github.com/user-attachments/assets/f68cff8a-d4b6-4ad9-ae58-db42867624d3)
+![Screenshot (56)](https://github.com/user-attachments/assets/48a62930-19ec-445c-81b4-0a0365372935)
+![Screenshot (57)](https://github.com/user-attachments/assets/ceedddbe-1f0b-40eb-8cd2-5fc3919d6ef5)
+![Screenshot (58)](https://github.com/user-attachments/assets/86ee373f-c1e7-451e-bcec-f0eeee8b3668)
+![Screenshot (59)](https://github.com/user-attachments/assets/7737c186-a65c-4e4e-b1e5-3d6a19ff6aca)
+![Screenshot (60)](https://github.com/user-attachments/assets/a66c4536-be1a-4ad5-9256-5f472182969d)
+![Screenshot (50)](https://github.com/user-attachments/assets/0a1075d4-45b2-4702-9d5c-2b73678b762c)
+![Screenshot (51)](https://github.com/user-attachments/assets/63a4c5f7-61cf-497f-998e-4576ad0dc82c)
+![Screenshot (52)](https://github.com/user-attachments/assets/3637f8bf-4e8a-4f56-8bab-37b7481ddf76)
+![Screenshot (53)](https://github.com/user-attachments/assets/cc4f0adf-f86d-4cb1-b345-c5ab8fdcf75b)
+![Screenshot (54)](https://github.com/user-attachments/assets/409b93cc-0df2-4bd1-b554-a9216ca654ac)
 
 ## Features
 
