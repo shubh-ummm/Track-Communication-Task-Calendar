@@ -6,9 +6,8 @@ import {
   Typography,
   Container,
   Paper,
-  Link,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import api from "../utils/api";
 
@@ -141,14 +140,14 @@ const Register = () => {
             </Button>
             <Box sx={{ textAlign: "center", mt: 2 }}>
               <Link
-                href="/login"
-                variant="body2"
-                sx={{
+                to="/login"
+                style={{
+                  color: "#1976d2",
                   textDecoration: "none",
                   "&:hover": { textDecoration: "underline" },
                 }}
               >
-                {"Already have an account? Sign In"}
+                Already have an account? Sign In
               </Link>
             </Box>
           </Box>

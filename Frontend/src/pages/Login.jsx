@@ -6,9 +6,8 @@ import {
   Typography,
   Container,
   Paper,
-  Link,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import api from "../utils/api";
 
@@ -109,14 +108,14 @@ const Login = () => {
             </Button>
             <Box sx={{ textAlign: "center", mt: 2 }}>
               <Link
-                href="/register"
-                variant="body2"
-                sx={{
+                to="/register"
+                style={{
+                  color: "#1976d2",
                   textDecoration: "none",
                   "&:hover": { textDecoration: "underline" },
                 }}
               >
-                {"Don't have an account? Sign Up"}
+                Don't have an account? Sign Up
               </Link>
             </Box>
           </Box>
