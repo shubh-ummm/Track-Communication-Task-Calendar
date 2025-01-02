@@ -1,4 +1,4 @@
-// models/Communication.ts
+
 const mongoose = require("mongoose");
 
 const communicationSchema = new mongoose.Schema(

@@ -6,7 +6,6 @@ const api = axios.create({
   withCredentials: true,
 });
 
-// Response interceptor
 api.interceptors.response.use(
   (response) => response,
   (error) => {
@@ -17,7 +16,6 @@ api.interceptors.response.use(
       }
       toast.error(error.response.data.message || "Something went wrong");
     } else {
-      // Network error or server not responding
       toast.error("Unable to connect to server. Please try again later.");
     }
     return Promise.reject(error);

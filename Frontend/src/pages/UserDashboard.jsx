@@ -73,7 +73,6 @@ const UserDashboard = () => {
     }
   };
 
-  // Calculate notifications
   const notifications = useMemo(() => {
     const overdue = [];
     const dueToday = [];
@@ -122,7 +121,6 @@ const UserDashboard = () => {
     return { overdue, dueToday };
   }, [communications]);
 
-  // Process communications by company
   const companyCommunications = useMemo(() => {
     const companyMap = new Map();
 
@@ -229,7 +227,6 @@ const UserDashboard = () => {
         const recentComms = params.row.communications.slice(0, 5).map((c) => {
           const deadlineDate = new Date(c.deadlineDate);
           const today = new Date();
-          // Set hours to 0 for accurate date comparison
           deadlineDate.setHours(0, 0, 0, 0);
           today.setHours(0, 0, 0, 0);
 
@@ -422,7 +419,6 @@ const UserDashboard = () => {
 
   const handleActionSubmit = async () => {
     try {
-      // Here you would make API call to save the new communication
       toast.success("Communication logged successfully");
       setIsActionModalOpen(false);
       fetchCommunications();

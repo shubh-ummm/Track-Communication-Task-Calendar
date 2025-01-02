@@ -1,4 +1,4 @@
-// models/Company.ts
+
 const mongoose = require("mongoose");
 
 const companySchema = new mongoose.Schema(
@@ -28,7 +28,6 @@ const companySchema = new mongoose.Schema(
   }
 );
 
-// Virtual populate for all communications
 companySchema.virtual("communications", {
   ref: "Communication",
   localField: "_id",

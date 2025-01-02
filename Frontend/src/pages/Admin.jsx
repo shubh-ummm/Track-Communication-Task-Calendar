@@ -80,13 +80,11 @@ const Admin = () => {
         api.get("/api/admin/communications"),
       ]);
 
-      // Transform users data
       const transformedUsers = (usersRes.data || []).map((user) => ({
         ...user,
         id: user._id || user.id,
       }));
 
-      // Transform companies data
       const transformedCompanies = (companiesRes.data || []).map((company) => ({
         ...company,
         id: company._id || company.id,
@@ -95,7 +93,6 @@ const Admin = () => {
         communicationPeriodicity: company.communicationPeriodicity || 7,
       }));
 
-      // Transform communications data with proper field mapping
       const transformedCommunications = (communicationsRes.data || []).map(
         (comm) => ({
           ...comm,
@@ -259,21 +256,17 @@ const Admin = () => {
           toast.success("Communication created successfully");
         }
 
-        // Transform the newly created/updated communication
         const updatedCommunication = {
           ...response.data,
           id: response.data._id || response.data.id,
         };
 
-        // Update the communications state
         setCommunications((prev) => {
           if (formData.id) {
-            // Update existing communication
             return prev.map((comm) =>
               comm.id === formData.id ? updatedCommunication : comm
             );
           } else {
-            // Add new communication
             return [...prev, updatedCommunication];
           }
         });
@@ -504,11 +497,10 @@ const Admin = () => {
   };
 
   const DataGridWithErrorBoundary = ({ rows = [], ...props }) => {
-    // Ensure rows is always an array and has valid data
     const validRows = Array.isArray(rows)
       ? rows.map((row) => ({
           ...row,
-          id: row.id || row._id, // Ensure id is always set
+          id: row.id || row._id,
         }))
       : [];
 

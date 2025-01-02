@@ -1,4 +1,4 @@
-// models/CommunicationType.ts
+
 const mongoose = require("mongoose");
 
 const communicationTypeSchema = new mongoose.Schema(

@@ -3,22 +3,18 @@ const Company = require("../models/Company");
 
 const getCommunications = async (req, res) => {
   try {
-    // Get user ID from the request (set by auth middleware)
     const userId = req.user._id;
 
-    // First get all companies the user has access to
     const communications = await Communication.find()
       .populate("companyId", "name location")
-      .sort({ issueDate: -1 }) // Sort by issue date descending
+      .sort({ issueDate: -1 }) 
       .lean()
       .exec();
 
     console.log("Raw communications with populated company:", communications);
 
-    // Transform the data for frontend
     const transformedCommunications = await Promise.all(
       communications.map(async (comm) => {
-        // If companyId exists but company details weren't populated, try to fetch them directly
         let companyDetails = comm.companyId;
         if (comm.companyId && typeof comm.companyId === "string") {
           try {
@@ -104,7 +100,7 @@ const completeMultipleCommunications = async (req, res) => {
     const updatedCommunications = await Communication.updateMany(
       {
         _id: { $in: communicationIds },
-        completed: false, // Only update non-completed communications
+        completed: false,
       },
       {
         completed: true,

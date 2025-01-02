@@ -233,5 +233,3 @@ ETENT/
 3. Set up CDN for static assets
 4. Enable HTTPS
 5. Configure caching
-
-
