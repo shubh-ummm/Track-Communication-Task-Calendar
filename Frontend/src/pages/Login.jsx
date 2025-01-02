@@ -31,6 +31,7 @@ const Login = () => {
     try {
       const response = await api.post("/api/auth/login", formData);
       localStorage.setItem("user", JSON.stringify(response.data.user));
+      localStorage.setItem("token", response.data.token);
       toast.success(response.data.message || "Login successful!");
       if (response.data.user.role === "admin") {
         navigate("/admin");

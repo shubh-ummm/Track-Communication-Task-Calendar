@@ -66,17 +66,6 @@ const login = async (req, res) => {
       expiresIn: "2d",
     });
 
-    const isProduction = process.env.NODE_ENV === "production";
-
-    res.cookie("token", token, {
-      httpOnly: true,
-      secure: isProduction,
-      sameSite: isProduction ? "none" : "lax",
-      domain: isProduction ? ".vercel.app" : undefined,
-      path: "/",
-      maxAge: 2 * 24 * 60 * 60 * 1000, // 2 days
-    });
-
     const userWithoutPassword = {
       _id: user._id,
       name: user.name,
@@ -88,6 +77,7 @@ const login = async (req, res) => {
     res.status(200).json({
       message: "Login successful",
       user: userWithoutPassword,
+      token: token,
     });
   } catch (error) {
     console.error("Login error:", error);
@@ -97,16 +87,6 @@ const login = async (req, res) => {
 
 const logout = async (req, res) => {
   try {
-    const isProduction = process.env.NODE_ENV === "production";
-
-    res.cookie("token", "", {
-      httpOnly: true,
-      secure: isProduction,
-      sameSite: isProduction ? "none" : "lax",
-      domain: isProduction ? ".vercel.app" : undefined,
-      path: "/",
-      expires: new Date(0),
-    });
     res.status(200).json({ message: "Logout successful" });
   } catch (error) {
     console.error("Logout error:", error);
