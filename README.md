@@ -11,6 +11,7 @@ A modern web application for managing company communications and tasks with an i
 https://track-communication-task-calendar-app.vercel.app/
 
 Email:"user@user.com" Password:"user"
+Note: Please log in as a User and Admin using different browsers.
 ![Screenshot (49)](https://github.com/user-attachments/assets/f68cff8a-d4b6-4ad9-ae58-db42867624d3)
 ![Screenshot (56)](https://github.com/user-attachments/assets/48a62930-19ec-445c-81b4-0a0365372935)
 ![Screenshot (57)](https://github.com/user-attachments/assets/ceedddbe-1f0b-40eb-8cd2-5fc3919d6ef5)
